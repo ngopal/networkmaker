@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+	<!-- // <script type="text/javascript" src="js/angular.js"></script> -->
+	<script type="text/javascript" src="js/vis.js"></script>
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+	<!-- // <script type="text/javascript" src="js/d3.js"></script> -->
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<style>
+textarea {
+    width: 30%;
+    height: 50%;
+    font-size: 12pt;
+    float:right; 
+    clear:right;
+}
+
+</style>
+<body>
+	<div ng-app="">
+		<div ng-controller="CommandCtrl">
+			<textarea type="text" ng-model="input.data"></textarea>
+			<div id="mynetwork"></div>
+			<!-- {{ohthehumanity(parsed(input.data).nodeElements,parsed(input.data).edgeElements)}} -->
+			{{dotParser(input.data)}}
+		</div>		
+	</div>
+</body>
+</html>
+
